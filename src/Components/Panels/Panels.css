@@ -1,3 +1,7 @@
+:root {
+  --legends-count: 2
+}
+
 body {
   font-family: "Source Sans Pro", Helvetica Neue, Helvetica, Arial, sans-serif;
   font-size: 16px;
@@ -10,14 +14,14 @@ body {
 }
 
 #timeline:hover .tl-item {
-  width: calc(100vw/3);
+  width: calc(100vw/var(--legends-count));
 }
 
 .tl-item {
   -webkit-transform: translate3d(0, 0, 0);
   transform: translate3d(0, 0, 0);
   position: relative;
-  width: calc(100vw/3);
+  width: calc(100vw/var(--legends-count));
   height: 100vh;
   min-height: 600px;
   color: #fff;
@@ -55,7 +59,7 @@ body {
 }
 
 .tl-item:hover {
-  width: calc(100vw/3.5) !important;
+  width: calc(100vw/var(--legends-count) + 250px) !important;
 }
 
 .tl-item:hover:after {
